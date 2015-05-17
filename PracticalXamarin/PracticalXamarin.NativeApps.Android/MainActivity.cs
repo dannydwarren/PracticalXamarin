@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using PracticalXamarin.ViewModels;
 
 namespace PracticalXamarin.NativeApps.Android
 {
@@ -12,6 +13,7 @@ namespace PracticalXamarin.NativeApps.Android
 	public class MainActivity : Activity
 	{
 		int count = 1;
+		public MessageGeneratorViewModel ViewModel { get; private set; }
 
 		protected override void OnCreate( Bundle bundle )
 		{
@@ -20,12 +22,22 @@ namespace PracticalXamarin.NativeApps.Android
 			// Set our view from the "main" layout resource
 			SetContentView( Resource.Layout.Main );
 
+			ViewModel = new MessageGeneratorViewModel();
+
 			// Get our button from the layout resource,
 			// and attach an event to it
-			Button button = FindViewById<Button>( Resource.Id.MyButton );
+			Button generateMessageButton = FindViewById<Button>( Resource.Id.GenerateMessageButton );
+			TextView messageTextView = FindViewById<TextView>( Resource.Id.MessageTextView );
+			
+			messageTextView.Text = ViewModel.CurrentMessage.Text;
 
-			button.Click += delegate { button.Text = string.Format( "{0} clicks!", count++ ); };
+			generateMessageButton.Click += delegate
+			{
+				ViewModel.GenerateMessage();
+				messageTextView.Text = ViewModel.CurrentMessage.Text;
+			};
 		}
+
 	}
 }
 

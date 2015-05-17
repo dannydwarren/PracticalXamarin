@@ -70,6 +70,16 @@
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PracticalXamarin.Models\PracticalXamarin.Models.csproj">
+      <Project>{64502533-F006-4F56-BB7F-315E092765AB}</Project>
+      <Name>PracticalXamarin.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PracticalXamarin.ViewModels\PracticalXamarin.ViewModels.csproj">
+      <Project>{0C4F100A-5E98-4E09-9925-C497A3268F96}</Project>
+      <Name>PracticalXamarin.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
