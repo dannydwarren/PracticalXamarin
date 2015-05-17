@@ -1,0 +1,2 @@
+# PracticalXamarin
+From January to May 2015 I have worked on the team at InterKnowlogy to bring the newly revamped IMSA Mobile App to 3 operating systems each with 2 device types all using Visual Studio, Xamarin, and Azure. In this presentation I'll teach you what you really need know to get started on your next cross-platform app. With real practical experience I'll help guide you through the mine field that still exists around the elusive "write once, run everywhere" mobile app. HINT: It still doesn't exist… but WOW are we close!
