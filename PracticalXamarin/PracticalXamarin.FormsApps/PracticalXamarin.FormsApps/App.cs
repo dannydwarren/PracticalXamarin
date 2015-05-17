@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using PracticalXamarin.FormsApps.Pages;
 using Xamarin.Forms;
 
 namespace PracticalXamarin.FormsApps
@@ -12,17 +12,18 @@ namespace PracticalXamarin.FormsApps
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
+			MainPage = new MessagesPage();
+			//new ContentPage {
+			//	Content = new StackLayout {
+			//		VerticalOptions = LayoutOptions.Center,
+			//		Children = {
+			//			new Label {
+			//				XAlign = TextAlignment.Center,
+			//				Text = "Welcome to Xamarin Forms!"
+			//			}
+			//		}
+			//	}
+			//};
 		}
 
 		protected override void OnStart ()

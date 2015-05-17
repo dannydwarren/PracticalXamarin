@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticalXamarin.FormsApps.Pages.MessagesPage">
+	<StackLayout Padding="0,20">
+		<Label Text="{Binding Path=CurrentMessage.Text}" FontSize="20" />
+		<Button Text="Generate Message" Clicked="GenerateMessageButtonClicked"/>
+	</StackLayout>
+</ContentPage>

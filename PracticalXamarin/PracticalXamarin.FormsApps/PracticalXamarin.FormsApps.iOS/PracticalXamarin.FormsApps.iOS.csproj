@@ -136,6 +136,12 @@
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PracticalXamarin.ViewModels\PracticalXamarin.ViewModels.csproj">
+      <Project>{0C4F100A-5E98-4E09-9925-C497A3268F96}</Project>
+      <Name>PracticalXamarin.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\PracticalXamarin.FormsApps\PracticalXamarin.FormsApps.projitems" Label="Shared" Condition="Exists('..\PracticalXamarin.FormsApps\PracticalXamarin.FormsApps.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
